@@ -1,4 +1,4 @@
-A tool for looking up FIPS codes.
+A tool for looking up FIPS county codes.
 
 ## Example
 
