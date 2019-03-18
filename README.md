@@ -2,7 +2,7 @@ A tool for looking up FIPS county codes.
 
 ## Example
 
-```
+```javascript
 const fips = require('fips-county-codes');
 
 fips.get({
@@ -66,4 +66,4 @@ All modern browsers. For IE11 support, you must polyfill `Array.find()`.
 
 ## License
 
-MIT
+[Sax Public Domain Notice](https://spdx.org/licenses/SAX-PD)
