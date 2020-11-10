@@ -39,7 +39,21 @@ const get = options => {
   return getByCountyAndState(options.state, options.county);
 };
 
+const getCountiesByState = (state) => {
+  if (!state)
+    throw new Error("You must provide a state abbreviation.");
+  if (state.length !== 2)
+    throw new Error("State must be a two letter state abbreviation.");
+  if (typeof state !== "string")
+    throw new Error("State abbreviation must be a string.");
+
+  const abbreviation = state.toUpperCase();
+  const match = data.filter(row => row.state === abbreviation);
+  return match;
+};
+
 module.exports = {
+  getCountiesByState,
   get,
   getByCountyAndState,
   getByFipsCode
