@@ -10,7 +10,7 @@ const getByFipsCode = fips => {
 
   return {
     state: row.state,
-    county: row.countyname
+    county: row.county
   };
 };
 
@@ -27,8 +27,8 @@ const getByCountyAndState = (state, county) => {
   const abbreviation = state.toUpperCase();
   const match = data.find(
     row =>
-      row.countyname === county ||
-      (row.countyname === `${county} County` && row.state === abbreviation)
+      row.county === county ||
+      (row.county === `${county} County` && row.state === abbreviation)
   );
 
   return match.countyfp;
