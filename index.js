@@ -31,7 +31,16 @@ const getByCountyAndState = (state, county) => {
       (row.county === `${county} County` && row.state === abbreviation)
   );
 
-  return match.countyfp;
+  const {
+    statefp,
+    countyfp,
+  } = match;
+
+  return {
+    fips: `${statefp}${countyfp}`,
+    statefp,
+    countyfp,
+  };
 };
 
 const get = options => {
