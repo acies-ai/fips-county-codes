@@ -25,21 +25,21 @@ const getByCountyAndState = (state, county) => {
     throw new Error("County name must be a string.");
 
   const abbreviation = state.toUpperCase();
-  const match = data.find(
-    row =>
-      row.county === county ||
-      (row.county === `${county} County` && row.state === abbreviation)
-  );
+  const match = data.find(row => row.fullname === county && row.state === abbreviation);
 
   const {
     statefp,
     countyfp,
+    county: name,
+    fullname,
   } = match;
 
   return {
     fips: `${statefp}${countyfp}`,
     statefp,
     countyfp,
+    name,
+    fullname,
   };
 };
 
