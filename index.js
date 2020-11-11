@@ -1,6 +1,4 @@
-const data = require("./data/fips-counties").filter(
-  row => row.classfp === "H1"
-);
+const data = require("./data/fips-counties");
 
 const getByFipsCode = fips => {
   if (!fips) throw new Error("You must provide a three digit fips code.");
