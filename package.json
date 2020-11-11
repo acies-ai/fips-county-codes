@@ -1,6 +1,6 @@
 {
   "name": "@aciesai/fips-county-codes",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A lookup tool for FIPS county codes",
   "main": "index.js",
   "author": "Roy Hewitt <roy_hewitt@fws.gov>",
